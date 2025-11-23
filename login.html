@@ -8,12 +8,17 @@
 <body>
     
     <h1>Login</h1>
+
     <form action="/backend/login.php" method="post">
-        <input type="text" required placeholder="Username">
-        <input type="password" required placeholder="Password">
+        <!-- CSRF Token -->
+        <input type="hidden" name="csrf_token" value="<?php echo bin2hex(random_bytes(32)); ?>">
+
+        <input name="username" type="text" required placeholder="Username">
+        <input name="password" type="password" required placeholder="Password">
         <input type="submit" value="Login">
     </form>
 
-    <a href="signup.html">SignUp</a>
+    <a href="/signup.html">Sign Up</a>
+
 </body>
 </html>
