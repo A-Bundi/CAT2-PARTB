@@ -1,0 +1,67 @@
+/* Dashboard Hintergrund */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background: #f5f6fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Card */
+.dashboard-container .card {
+    background: white;
+    padding: 2.5rem;
+    width: 380px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    animation: fadeIn 0.6s ease;
+}
+
+/* Heading */
+.card h1 {
+    color: #2d3436;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: #636e72;
+    margin-bottom: 1.5rem;
+}
+
+/* User Box */
+.user-box {
+    padding: 15px;
+    background: #eceffd;
+    border-radius: 10px;
+    font-size: 17px;
+    color: #2d3436;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+/* Logout Button */
+.logout-btn {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #6c5ce7;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.logout-btn:hover {
+    background: #574bd6;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
