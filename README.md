@@ -1,8 +1,4 @@
-Here is a **complete, polished, B2+ level README** for your login–signup PHP project.
-It is professional, clear, and perfect for GitHub.
-You can copy-paste it directly into your `README.md`.
 
----
 
 # **Login & Signup System (PHP + MySQL)**
 
