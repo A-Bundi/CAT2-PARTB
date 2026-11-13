@@ -60,6 +60,7 @@ $displayName = htmlspecialchars($user["username"], ENT_QUOTES, 'UTF-8');
                 <span><?php echo $displayName; ?></span>
             </div>
 
+            <a class="logout-btn" style="margin-right:8px" href="feedback.php">Feedback</a>
             <a class="logout-btn" href="backend/logout.php">Logout</a>
         </div>
     </div>
