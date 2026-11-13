@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Inter", sans-serif;
-    background: #f5f6fa;
+    background: #ecfdf5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@ body {
 .container h1 {
     margin-bottom: 1.2rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: #134e4a;
 }
 
 /* ============================
@@ -61,8 +61,8 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus {
     outline: none;
-    border-color: #6c5ce7;
-    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.25);
+    border-color: #0f766e;
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.25);
 }
 
 /* ============================
@@ -72,7 +72,7 @@ input[type="password"]:focus {
 input[type="submit"] {
     margin-top: 10px;
     padding: 12px;
-    background: #6c5ce7;
+    background: #0f766e;
     color: white;
     border: none;
     border-radius: 10px;
@@ -82,7 +82,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background: #5a4bd1;
+    background: #0b5d57;
 }
 
 input[type="submit"]:active {
@@ -97,13 +97,13 @@ a {
     display: inline-block;
     margin-top: 15px;
     font-size: 14px;
-    color: #6c5ce7;
+    color: #0f766e;
     text-decoration: none;
     transition: color 0.25s ease;
 }
 
 a:hover {
-    color: #493bc1;
+    color: #134e4a;
 }
 
 /* ============================
@@ -113,4 +113,24 @@ a:hover {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================
+   CUSTOM ADDITIONS
+============================ */
+
+.brand {
+    margin: 0 0 0.5rem;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #0f766e;
+}
+
+.quote {
+    margin: 12px 0 0;
+    font-size: 13px;
+    font-style: italic;
+    color: #0b5d57;
 }
