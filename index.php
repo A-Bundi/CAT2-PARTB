@@ -13,7 +13,7 @@ if (!isset($_SESSION["user_id"])) {
 $servername = "localhost";
 $username   = "root";
 $password   = "";
-$dbname     = "db_login_signup";
+$dbname     = "CAT2";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 $conn->set_charset("utf8mb4");

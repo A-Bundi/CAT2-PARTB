@@ -61,7 +61,7 @@ To run this project, you need:
 Create a database named:
 
 ```
-db_login_signup
+CAT2
 ```
 
 Then create the table:

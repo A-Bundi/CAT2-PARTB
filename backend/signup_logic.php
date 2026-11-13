@@ -30,7 +30,7 @@ unset($_SESSION['csrf_token']);
 $servername = "localhost";
 $username   = "root";
 $password   = "";
-$dbname     = "db_login_signup";
+$dbname     = "CAT2";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 $conn->set_charset("utf8mb4");
