@@ -28,8 +28,8 @@ unset($_SESSION['csrf_token']);
 //   DB CONNECTION
 // =========================
 $servername = "localhost";
-$username   = "root";
-$password   = "";
+$username   = "cat2_user";
+$password   = "Cat2App_Pass2026";
 $dbname     = "CAT2";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -57,7 +57,7 @@ if ($_SESSION['signup_attempts'] > 10) {
 // =========================
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
-    if (empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["email"])) {
+    if (empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["email"]) || empty($_POST["first_name"]) || empty($_POST["last_name"]) || empty($_POST["phone"]) || empty($_POST["dob"]) || empty($_POST["gender"]) || empty($_POST["country"])) {
         echo "<script>alert('All fields are required.')</script>";
         exit();
     }
@@ -65,6 +65,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $inputUsername = $_POST['username'];  // Klartext
     $inputPassword = $_POST['password'];
     $inputEmail    = $_POST['email'];
+    $inputFirst    = trim($_POST['first_name']);
+    $inputLast     = trim($_POST['last_name']);
+    $inputPhone    = trim($_POST['phone']);
+    $inputDob      = $_POST['dob'];
+    $inputGender   = $_POST['gender'];
+    $inputCountry  = trim($_POST['country']);
 
     // Passwort sicher hashen
     $hashedPassword = password_hash($inputPassword, PASSWORD_DEFAULT);
@@ -80,21 +86,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($stmt->num_rows > 0) {
         $_SESSION['signup_attempts']++;
         $stmt->close();
-        header("Location: /signup.php?error=1");
+        header("Location: ../signup.php?error=1");
         exit();
     }
 
     $stmt->close();
 
     // User eintragen
-    $sql = "INSERT INTO user (username, password, email) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO user (first_name, last_name, username, password, email, phone, date_of_birth, gender, country) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
 
     if (!$stmt) {
         die("Prepare failed: " . $conn->error);
     }
 
-    $stmt->bind_param("sss", $inputUsername, $hashedPassword, $inputEmail);
+    $stmt->bind_param("sssssssss", $inputFirst, $inputLast, $inputUsername, $hashedPassword, $inputEmail, $inputPhone, $inputDob, $inputGender, $inputCountry);
     $stmt->execute();
     $stmt->close();
 

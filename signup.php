@@ -27,7 +27,18 @@ $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
             <!-- CSRF Token -->
             <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
 
+            <input name="first_name" type="text" placeholder="First name" required>
+            <input name="last_name" type="text" placeholder="Last name" required>
             <input name="email" type="email" placeholder="Email" required>
+            <input name="phone" type="tel" placeholder="Phone (e.g. +254712345678)" required>
+            <input name="dob" type="date" title="Date of birth" required>
+            <select name="gender" required>
+                <option value="" disabled selected>Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <input name="country" type="text" placeholder="Country" value="Kenya" required>
             <input name="username" type="text" placeholder="Username" required>
             <input name="password" type="password" placeholder="Password" required>
             <input type="submit" value="Sign Up">

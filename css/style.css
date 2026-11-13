@@ -10,7 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* ============================
@@ -133,4 +133,25 @@ a:hover {
     font-size: 13px;
     font-style: italic;
     color: #0b5d57;
+}
+
+/* Extra form fields */
+input[type="tel"],
+input[type="date"],
+select {
+    padding: 12px 14px;
+    border: 1px solid #dcdde1;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    background: white;
+    color: #333;
+}
+
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus {
+    outline: none;
+    border-color: #0f766e;
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.25);
 }

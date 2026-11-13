@@ -29,8 +29,8 @@ unset($_SESSION['csrf_token']);
 //       DB CONNECTION
 // =========================
 $servername = "localhost";
-$username   = "root";
-$password   = "";
+$username   = "cat2_user";
+$password   = "Cat2App_Pass2026";
 $dbname     = "CAT2";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
